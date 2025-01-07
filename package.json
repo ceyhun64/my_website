@@ -2,7 +2,7 @@
   "name": "myblog",
   "version": "1.0.0",
   "engines": {
-    "node": "≥22.0.0 <23.0.0"
+    "node": ">=18.0.0"
   },
   "description": "dinamik web service",
   "type": "commonjs",
