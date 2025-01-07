@@ -1,0 +1,59 @@
+<div class="single">
+    <div class="wrapper">
+        <div class="singleHeader">
+            <h2>
+                {{singleData.title}}
+            </h2>
+            {{#if user}}
+
+            <div class="buttons">
+                <button id="editButton">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button id="deleteButton">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+            </div>
+            {{/if}}
+        </div>
+        <img src="{{singleData.path}}">
+
+        <p>
+            {{singleData.content}}
+        </p>
+        <div class="singleFooter">
+            <span>{{singleData.name}}</span>
+            <span> {{singleData.date}}</span>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const deleteButton = document.getElementById('deleteButton')
+    const editButton = document.getElementById('editButton')
+
+    deleteButton.addEventListener('click', () => {
+        let url = window.location.href;
+        url = url.split('single/')[1];
+
+        fetch(`/single/${url}`, {
+            method: 'delete'
+        }).then(response => response.json())
+            .then((res) => {
+                if (res.case) {
+                    setTimeout(() => {
+                        window.location.href = '/'
+                    }, 1000)
+                }
+
+            })
+    })
+
+    editButton.addEventListener('click', () => {
+        let url = window.location.href;
+        let id = url.split('single/')[1];
+
+        window.location.href = `/edit/${id}`
+    })
+</script>

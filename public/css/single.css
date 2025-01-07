@@ -1,0 +1,89 @@
+.single {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.single .wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    max-width: 1000px;
+}
+
+.singleHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.single h2 {
+    font-family: "Pacifico", serif;
+    font-size: 30px;
+
+}
+
+.singleHeader .buttons button {
+
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.singleHeader .buttons button:first-child {
+    background-color: rgb(255, 207, 117);
+}
+
+.singleHeader .buttons button:last-child {
+    background-color: rgb(255, 124, 124);
+    margin-left: 15px;
+}
+
+.single img {
+
+    border-radius: 10px;
+    max-height: 500px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.single p {
+    font-family: "Arvo", serif;
+}
+
+.single p::first-letter {
+    margin-left: 20px;
+}
+
+.single .singleFooter {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.single .singleFooter span:first-child {
+    font-family: "Dancing Script", serif;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.single .singleFooter span:last-child {
+    font-family: "Ubuntu Mono", serif;
+    font-size: 18px;
+    font-weight: 700;
+
+}

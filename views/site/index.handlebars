@@ -1,0 +1,43 @@
+
+{{>header}}
+   <div class="home">
+      <div class="wrapper">
+         <div class="posts">
+
+{{#each allData}}
+            <a href="/single/{{_id}}" class="post target">
+               <h1>{{title}}</h1>
+               <img src="{{path}}" alt="content">
+               <p>
+                  {{content}}
+               </p>
+               <div class="authorAndDate">
+                  <span>{{name}}</span>
+                  <span>{{date}}</span>
+               </div>
+            </a>
+{{/each}}            
+
+         </div>
+
+         <div class="sidebar">
+            <div class="area target">
+               <h3>Who I Am</h3>
+               <img src="/img/WhatsApp Görsel 2024-12-20 saat 14.29.57_d3210849.jpg" alt="user">
+               <div class="categories">
+                  <span>#cyber security</span>
+                  <span>#website dev.</span>
+                  <span>#mobile app dev.</span>
+                  <span>#backend dev.</span>
+               </div>
+            </div>
+
+            <div class="area target">
+               <h3>Your Space</h3>
+               <a href="/admin/add">Add Post</a>
+               <a href="#">Your Perfonce</a>
+               <a href="#">Number of Views</a>
+            </div>
+         </div>
+      </div>
+   </div>
